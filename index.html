@@ -193,6 +193,19 @@ Solicitar información
 </a>
 
 </section>
+<script>
+function trackWhatsApp(){
 
+  // Google Analytics
+  gtag('event', 'click_whatsapp', {
+    event_category: 'WhatsApp',
+    event_label: 'Boton WhatsApp'
+  });
+
+  // Meta Pixel
+  fbq('track', 'Contact');
+
+}
+</script>
 </body>
 </html>
