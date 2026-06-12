@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librería Cristiana Logos | Bogotá</title>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -18,63 +18,63 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('61.jpg'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
-        .seccion { padding: 50px 20px; max-width: 900px; margin: auto; text-align: center; }
-        .btn-wa { display: inline-block; background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
-        .grid-ventajas { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-        .tarjeta { flex: 1; min-width: 250px; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .testimonio { background: #fff; padding: 20px; border-left: 5px solid #25D366; margin: 20px auto; max-width: 700px; text-align: left; font-style: italic; }
-        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; padding: 40px; max-width: 1100px; margin: auto; }
-        .producto { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        .footer { padding: 30px; background: #2c3e50; color: white; text-align: center; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #444; background-color: #fafafa; }
+        
+        /* Hero mejorado */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('61.jpg'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+        
+        /* Secciones */
+        .seccion { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        .bg-blanco { background: white; }
+        
+        /* Rejilla de productos más compacta */
+        .productos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; padding: 20px; max-width: 1000px; margin: auto; }
+        .producto { background: white; padding: 10px; border-radius: 8px; border: 1px solid #eee; text-align: center; transition: 0.3s; }
+        .producto:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .producto img { width: 100%; height: 160px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
+        .producto h3 { font-size: 0.9em; margin-bottom: 10px; }
+        
+        /* Botones y otros */
+        .btn-wa { display: inline-block; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9em; }
+        .testimonio { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px; font-size: 0.95em; }
+        .footer { padding: 40px; background: #2c3e50; color: white; text-align: center; }
     </style>
 </head>
 <body>
 
 <section class="hero">
     <h1>Librería Cristiana Logos</h1>
-    <p>Más que libros, recursos para fortalecer tu propósito y tu hogar.</p>
-    <a href="https://wa.me/573125756581" class="btn-wa">💬 Asesoría Personalizada</a>
+    <p>Kennedy Central, Bogotá | El lugar donde encuentras paz y propósito</p>
+    <a href="https://wa.me/573125756581" class="btn-wa">💬 Asesoría por WhatsApp</a>
 </section>
 
 <section class="seccion">
-    <h2>¿Por qué confiar en nosotros?</h2>
-    <div class="grid-ventajas">
-        <div class="tarjeta"><h3>📍 Local en Kennedy</h3><p>Estamos cerca de ti. Ven y elige personalmente el detalle perfecto.</p></div>
-        <div class="tarjeta"><h3>👩‍🏫 Asesoría Experta</h3><p>No solo vendemos, te ayudamos a encontrar lo que realmente necesitas.</p></div>
-        <div class="tarjeta"><h3>✨ Gran Variedad</h3><p>Biblias, decoración, regalos originales y detalles para toda ocasión.</p></div>
+    <h2>Nuestros Destacados</h2>
+    <div class="productos-grid">
+        <!-- Ejemplo: puedes duplicar este bloque para todos tus productos -->
+        <div class="producto">
+            <img src="61.jpg" alt="Producto">
+            <h3>Biblia Especial</h3>
+            <a href="https://wa.me/573125756581?text=Interesado%20en%20Biblia" style="color:#25D366; font-weight:bold; text-decoration:none;">Ver más</a>
+        </div>
+        <div class="producto">
+            <img src="62.jpg" alt="Producto">
+            <h3>Regalo Único</h3>
+            <a href="https://wa.me/573125756581?text=Interesado%20en%20regalo" style="color:#25D366; font-weight:bold; text-decoration:none;">Ver más</a>
+        </div>
     </div>
 </section>
 
-<section class="seccion" style="background: #fdfdfd;">
+<section class="seccion bg-blanco">
     <h2>Lo que dicen nuestros clientes</h2>
-    <div class="testimonio">"Excelente atención, conocen los temas y te orientan frente a lo que buscas. Recomendada 100%." - <em>Danyela Muñoz</em></div>
+    <div class="testimonio">"Excelente atención, conocen los temas y te orientan. Recomendada 100%." - <em>Danyela Muñoz</em></div>
     <div class="testimonio">"La señora Olga es un amor, todo quedó hermoso y los precios son muy cómodos." - <em>Blanca Buitrago</em></div>
 </section>
 
-<div class="productos-grid">
-    <div class="producto">
-        <img src="61.jpg" alt="Biblia">
-        <h3>Biblia Edición Especial</h3>
-        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20la%20Biblia" class="btn-wa" style="padding: 10px 20px;" onclick="fbq('track', 'InitiateCheckout');">🛒 Comprar</a>
-    </div>
-    <div class="producto">
-        <img src="62.jpg" alt="Biblia">
-        <h3>Detalles y Regalos</h3>
-        <a href="https://wa.me/573125756581?text=Hola,%20busco%20un%20detalle" class="btn-wa" style="padding: 10px 20px;" onclick="fbq('track', 'InitiateCheckout');">🛒 Comprar</a>
-    </div>
-</div>
-
-<section class="seccion">
-    <h2>¿Quieres divertirte?</h2>
-    <p>Juega nuestra sopa de letras y obtén un beneficio especial en tu compra.</p>
-    <a href="https://jcrodrigu.github.io/juego" class="btn-wa" style="background:#3498db;">🎮 Jugar Ahora</a>
-</section>
-
 <footer class="footer">
-    <p>📍 Calle 35C Sur No 78A-18, Kennedy Central, Bogotá</p>
-    <p>📱 WhatsApp: 312-5756581</p>
+    <p><strong>Librería Cristiana Logos</strong></p>
+    <p>Calle 35C Sur No 78A-18, Kennedy Central, Bogotá</p>
 </footer>
 
 </body>
