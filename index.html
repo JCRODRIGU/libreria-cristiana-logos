@@ -15,7 +15,6 @@
     fbq('init', '1377317584454825');
     fbq('track', 'PageView');
     </script>
-    <!-- End Meta Pixel Code -->
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,9 +24,9 @@
         .btn-wa { display: inline-block; background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
         .grid-ventajas { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
         .tarjeta { flex: 1; min-width: 250px; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .testimonio { background: #fff; padding: 20px; border-left: 5px solid #25D366; margin: 20px auto; max-width: 700px; text-align: left; font-style: italic; }
         .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; padding: 40px; max-width: 1100px; margin: auto; }
         .producto { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        .producto img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
         .footer { padding: 30px; background: #2c3e50; color: white; text-align: center; }
     </style>
 </head>
@@ -35,41 +34,47 @@
 
 <section class="hero">
     <h1>Librería Cristiana Logos</h1>
-    <p>Fortalece tu fe con los mejores recursos cristianos en Bogotá</p>
-    <a href="https://wa.me/573125756581" class="btn-wa">💬 Asesoría por WhatsApp</a>
+    <p>Más que libros, recursos para fortalecer tu propósito y tu hogar.</p>
+    <a href="https://wa.me/573125756581" class="btn-wa">💬 Asesoría Personalizada</a>
 </section>
 
 <section class="seccion">
-    <h2>¿Por qué elegirnos?</h2>
+    <h2>¿Por qué confiar en nosotros?</h2>
     <div class="grid-ventajas">
-        <div class="tarjeta"><h3>📍 Ubicación Física</h3><p>Estamos en Kennedy Central. Atención personalizada y de confianza.</p></div>
-        <div class="tarjeta"><h3>📖 Catálogo Exclusivo</h3><p>Recursos seleccionados para tu crecimiento espiritual diario.</p></div>
-        <div class="tarjeta"><h3>🎁 Gamificación</h3><p>Participa en nuestra sopa de letras y gana descuentos especiales.</p></div>
+        <div class="tarjeta"><h3>📍 Local en Kennedy</h3><p>Estamos cerca de ti. Ven y elige personalmente el detalle perfecto.</p></div>
+        <div class="tarjeta"><h3>👩‍🏫 Asesoría Experta</h3><p>No solo vendemos, te ayudamos a encontrar lo que realmente necesitas.</p></div>
+        <div class="tarjeta"><h3>✨ Gran Variedad</h3><p>Biblias, decoración, regalos originales y detalles para toda ocasión.</p></div>
     </div>
+</section>
+
+<section class="seccion" style="background: #fdfdfd;">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonio">"Excelente atención, conocen los temas y te orientan frente a lo que buscas. Recomendada 100%." - <em>Danyela Muñoz</em></div>
+    <div class="testimonio">"La señora Olga es un amor, todo quedó hermoso y los precios son muy cómodos." - <em>Blanca Buitrago</em></div>
 </section>
 
 <div class="productos-grid">
     <div class="producto">
-        <img src="61.jpg" alt="Producto">
+        <img src="61.jpg" alt="Biblia">
         <h3>Biblia Edición Especial</h3>
-        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20la%20Biblia" class="btn-wa" onclick="fbq('track', 'InitiateCheckout');">🛒 Comprar</a>
+        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20la%20Biblia" class="btn-wa" style="padding: 10px 20px;" onclick="fbq('track', 'InitiateCheckout');">🛒 Comprar</a>
     </div>
     <div class="producto">
-        <img src="62.jpg" alt="Producto">
-        <h3>Devocional Diario</h3>
-        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20el%20Devocional" class="btn-wa" onclick="fbq('track', 'InitiateCheckout');">🛒 Comprar</a>
+        <img src="62.jpg" alt="Biblia">
+        <h3>Detalles y Regalos</h3>
+        <a href="https://wa.me/573125756581?text=Hola,%20busco%20un%20detalle" class="btn-wa" style="padding: 10px 20px;" onclick="fbq('track', 'InitiateCheckout');">🛒 Comprar</a>
     </div>
 </div>
 
-<section class="seccion" style="background:#f4f4f4;">
-    <h2>¡Diviértete y Gana!</h2>
-    <p>Prueba nuestra sopa de letras digital y obtén un descuento.</p>
-    <a href="https://jcrodrigu.github.io/juego" class="btn-wa" style="background:#3498db;">🎮 Jugar Sopa de Letras</a>
+<section class="seccion">
+    <h2>¿Quieres divertirte?</h2>
+    <p>Juega nuestra sopa de letras y obtén un beneficio especial en tu compra.</p>
+    <a href="https://jcrodrigu.github.io/juego" class="btn-wa" style="background:#3498db;">🎮 Jugar Ahora</a>
 </section>
 
 <footer class="footer">
-    <p>Calle 35C Sur No 78A-18, Kennedy Central, Bogotá</p>
-    <p>WhatsApp: 312-5756581</p>
+    <p>📍 Calle 35C Sur No 78A-18, Kennedy Central, Bogotá</p>
+    <p>📱 WhatsApp: 312-5756581</p>
 </footer>
 
 </body>
