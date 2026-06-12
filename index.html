@@ -3,54 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Librería Cristiana Logos | Biblias y Recursos</title>
+    <title>Librería Cristiana Logos | Bogotá</title>
     <style>
-        /* Estilos base */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; background: #fdfdfd; color: #333; }
-
-        /* HERO */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover; 
-            color: white; 
-            padding: 100px 20px; 
-            text-align: center; 
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; }
-
-        /* BOTON */
-        .btn { 
-            display: inline-block; 
-            background: #25D366; 
-            color: white; 
-            padding: 16px 32px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            transition: 0.3s; 
-            box-shadow: 0 4px 10px rgba(37,211,102,0.3); 
-        }
-        .btn:hover { transform: scale(1.05); background: #128C7E; }
-
-        /* SECCIONES */
-        .section { padding: 80px 20px; max-width: 1100px; margin: auto; text-align: center; }
-        h2 { font-size: 2.2rem; margin-bottom: 30px; color: #2c3e50; }
-
-        /* CARDS PRODUCTOS */
-        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .producto { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; }
-        .producto:hover { transform: translateY(-10px); }
-        .producto img { width: 100%; height: 250px; object-fit: cover; }
-        .producto h3 { padding: 15px 0 5px; color: #2c3e50; }
-        .producto p { padding: 0 20px 20px; font-size: 0.95rem; }
-
-        /* FOOTER Y CONTACTO */
-        .footer { background: #2c3e50; color: #ecf0f1; padding: 40px 20px; text-align: center; }
-        .contacto-info { margin-bottom: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f4f4f4; }
+        .hero { background: #2c3e50; color: white; padding: 80px 20px; text-align: center; }
+        .btn { display: inline-block; background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px 20px; max-width: 1100px; margin: auto; }
+        .producto { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .producto img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .footer { text-align: center; padding: 40px; background: #333; color: white; }
     </style>
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE2M0G53EP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -59,7 +23,6 @@
         gtag('config', 'G-TE2M0G53EP');
     </script>
 
-    <!-- Meta Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -70,57 +33,45 @@
         fbq('track', 'PageView');
     </script>
 </head>
-
 <body>
 
     <section class="hero">
         <h1>Librería Cristiana Logos</h1>
-        <p>Tu guía espiritual en Bogotá. Encuentra biblias, libros y regalos con propósito.</p>
-        <a class="btn" href="https://wa.me/573125756581" onclick="trackWhatsApp()">💬 Asesoría por WhatsApp</a>
+        <p>Encuentra recursos que fortalecen tu fe.</p>
+        <a class="btn" href="https://wa.me/573125756581" onclick="fbq('track', 'Contact');">💬 Escríbenos al WhatsApp</a>
     </section>
 
-    <section class="section">
-        <h2>Nuestro Propósito</h2>
-        <p>Más que una librería, somos un acompañamiento en tu camino de fe. Te ayudamos a elegir la Biblia ideal según tu propósito y etapa de vida.</p>
-    </section>
-
-    <section class="section" style="background: #f0f0f0;">
-        <h2>Productos Destacados</h2>
-        <div class="productos-grid">
-            
-            <div class="producto">
-                <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/64.jpg" alt="Biblias">
-                <h3>Biblias</h3>
-                <p>Versiones para estudio, devocionales y regalos especiales.</p>
-            </div>
-
-            <div class="producto">
-                <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/0-imagenes/IMG_6733.jpg" alt="Devocionales">
-                <h3>Devocionales</h3>
-                <p>Materiales para fortalecer tu tiempo diario con Dios.</p>
-            </div>
-
-            <div class="producto">
-                <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/0-imagenes/IMG_6748.jpg" alt="Regalos">
-                <h3>Regalos Cristianos</h3>
-                <p>Detalles que inspiran y bendicen a tus seres queridos.</p>
-            </div>
-
+    <div class="productos-grid">
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/61.jpg" alt="Producto">
+            <h3>Producto Destacado 1</h3>
         </div>
-    </section>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/62.jpg" alt="Producto">
+            <h3>Producto Destacado 2</h3>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/63.jpg" alt="Producto">
+            <h3>Producto Destacado 3</h3>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/64.jpg" alt="Producto">
+            <h3>Producto Destacado 4</h3>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/65.jpg" alt="Producto">
+            <h3>Producto Destacado 5</h3>
+        </div>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/JCRODRIGU/libreria-cristiana-logos/main/66.jpg" alt="Producto">
+            <h3>Producto Destacado 6</h3>
+        </div>
+    </div>
 
     <footer class="footer">
-        <h3>Librería Cristiana Logos</h3>
-        <p class="contacto-info">Calle 35C Sur No 78A-18, Kennedy Central, Bogotá</p>
+        <p>Librería Cristiana Logos - Kennedy Central, Bogotá</p>
         <p>Celular: 312-5756581</p>
-        <p style="margin-top:20px; font-size: 0.8rem;">© 2026 Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        function trackWhatsApp(){
-            gtag('event', 'click_whatsapp', { event_category: 'WhatsApp', event_label: 'Boton principal' });
-            fbq('track', 'Contact');
-        }
-    </script>
 </body>
 </html>
