@@ -17,39 +17,59 @@
     </script>
     <!-- End Meta Pixel Code -->
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE2M0G53EP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TE2M0G53EP');
-    </script>
-
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: sans-serif; background: #f4f4f4; text-align: center; }
-        .hero { color: white; padding: 100px 20px; }
-        .btn-wa { display: inline-block; background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; max-width: 1000px; margin: auto; }
-        .producto { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .producto img { width: 100%; height: auto; border-radius: 5px; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; text-align: center; }
+        .hero { color: white; padding: 80px 20px; }
+        .btn-wa { display: inline-block; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; padding: 40px; max-width: 1100px; margin: auto; }
+        .producto { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .producto img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+        .footer { padding: 30px; background: #2c3e50; color: white; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('61.jpg'); background-size: cover; background-position: center;">
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('61.jpg'); background-size: cover; background-position: center;">
     <h1>Librería Cristiana Logos</h1>
-    <p>Encuentra recursos que fortalecen tu fe.</p>
-    <a href="https://wa.me/573125756581" class="btn-wa" onclick="fbq('track', 'Contact');">💬 Escríbenos al WhatsApp</a>
+    <p>Kennedy Central, Bogotá | Especialistas en material cristiano</p>
 </section>
 
 <div class="productos-grid">
-    <div class="producto"><img src="61.jpg" alt="Biblia"><h3>Biblia 61</h3></div>
-    <div class="producto"><img src="62.jpg" alt="Biblia"><h3>Biblia 62</h3></div>
-    <div class="producto"><img src="63.jpg" alt="Biblia"><h3>Biblia 63</h3></div>
-    <div class="producto"><img src="64.jpg" alt="Biblia"><h3>Biblia 64</h3></div>
+    <!-- Producto 61 -->
+    <div class="producto">
+        <img src="61.jpg" alt="Biblia 61">
+        <h3>Biblia Edición Especial</h3>
+        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20la%20Biblia%20Edición%20Especial" 
+           class="btn-wa" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Biblia 61'});">🛒 Comprar</a>
+    </div>
+    <!-- Producto 62 -->
+    <div class="producto">
+        <img src="62.jpg" alt="Biblia 62">
+        <h3>Devocional Diario</h3>
+        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20el%20Devocional%20Diario" 
+           class="btn-wa" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Biblia 62'});">🛒 Comprar</a>
+    </div>
+    <!-- Producto 63 -->
+    <div class="producto">
+        <img src="63.jpg" alt="Biblia 63">
+        <h3>Libro de Crecimiento</h3>
+        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20el%20Libro%20de%20Crecimiento" 
+           class="btn-wa" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Biblia 63'});">🛒 Comprar</a>
+    </div>
+    <!-- Producto 64 -->
+    <div class="producto">
+        <img src="64.jpg" alt="Biblia 64">
+        <h3>Recurso Cristiano</h3>
+        <a href="https://wa.me/573125756581?text=Hola,%20me%20interesa%20el%20Recurso%20Cristiano" 
+           class="btn-wa" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Biblia 64'});">🛒 Comprar</a>
+    </div>
 </div>
+
+<footer class="footer">
+    <p>Librería Cristiana Logos | Calle 35C Sur No 78A-18 Kennedy Central, Bogotá</p>
+    <p>WhatsApp: 312-5756581</p>
+</footer>
 
 </body>
 </html>
