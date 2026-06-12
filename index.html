@@ -4,28 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librería Cristiana Logos | Bogotá</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1377317584454825');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE2M0G53EP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TE2M0G53EP');
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: sans-serif; background: #f4f4f4; text-align: center; }
-        .hero { background: #2c3e50; color: white; padding: 60px 20px; }
+        .hero { color: white; padding: 100px 20px; }
+        .btn-wa { display: inline-block; background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
         .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; max-width: 1000px; margin: auto; }
-        .producto { background: white; padding: 10px; border-radius: 8px; }
+        .producto { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .producto img { width: 100%; height: auto; border-radius: 5px; }
     </style>
 </head>
 <body>
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('61.jpg'); background-size: cover; background-position: center; color: white; padding: 100px 20px;">
+
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('61.jpg'); background-size: cover; background-position: center;">
     <h1>Librería Cristiana Logos</h1>
     <p>Encuentra recursos que fortalecen tu fe.</p>
-    <a href="https://wa.me/573125756581" style="display:inline-block; background:#25D366; color:white; padding:15px 30px; border-radius:50px; text-decoration:none; font-weight:bold; margin-top:20px;">💬 Escríbenos al WhatsApp</a>
+    <a href="https://wa.me/573125756581" class="btn-wa" onclick="fbq('track', 'Contact');">💬 Escríbenos al WhatsApp</a>
 </section>
 
-    <div class="productos-grid">
-        <!-- Estos links ahora buscarán en 'main' -->
-        <div class="producto"><img src="61.jpg" alt="Biblia"><h3>Biblia 61</h3></div>
-        <div class="producto"><img src="62.jpg" alt="Biblia"><h3>Biblia 62</h3></div>
-        <div class="producto"><img src="63.jpg" alt="Biblia"><h3>Biblia 63</h3></div>
-        <div class="producto"><img src="64.jpg" alt="Biblia"><h3>Biblia 64</h3></div>
-    </div>
+<div class="productos-grid">
+    <div class="producto"><img src="61.jpg" alt="Biblia"><h3>Biblia 61</h3></div>
+    <div class="producto"><img src="62.jpg" alt="Biblia"><h3>Biblia 62</h3></div>
+    <div class="producto"><img src="63.jpg" alt="Biblia"><h3>Biblia 63</h3></div>
+    <div class="producto"><img src="64.jpg" alt="Biblia"><h3>Biblia 64</h3></div>
+</div>
+
 </body>
 </html>
