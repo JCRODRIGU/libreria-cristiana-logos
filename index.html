@@ -4,30 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librería Cristiana Logos | Kennedy Central</title>
-    <!-- Pixel Meta -->
-    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1377317584454825');fbq('track', 'PageView');</script>
+    
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1377317584454825');
+        fbq('track', 'PageView');
+    </script>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Georgia', serif; line-height: 1.6; color: #333; background: #fff; }
         
-        /* Hero Estilo Profesional */
         .hero { background: #2c3e50; color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid #25D366; }
         .hero h1 { font-size: 3em; margin-bottom: 10px; }
         
-        /* Contenido Principal */
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
         h2 { border-bottom: 2px solid #25D366; display: inline-block; margin-bottom: 20px; }
         
-        /* Grid de servicios (lo que hace que se vea poblada) */
-        .servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
-        .card { padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
-        
-        /* Grid de productos */
-        .productos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; margin-top: 20px; }
-        .producto { border: 1px solid #eee; padding: 10px; text-align: center; }
-        .producto img { width: 100%; height: 180px; object-fit: cover; }
-        
+        /* Grid para las 12 imágenes */
+        .imagenes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .contenedor-img {
+            position: relative;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .contenedor-img img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .btn-wa-overlay {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 0.9em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+
+        .btn-wa-overlay:hover { background: #128C7E; }
+
         .btn-wa { display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-top: 20px; }
         .footer { background: #333; color: white; padding: 40px; text-align: center; margin-top: 50px; }
     </style>
@@ -41,22 +73,18 @@
 
 <div class="container">
     <section>
-        <h2>¿Quiénes somos?</h2>
-        <p>En Librería Cristiana Logos, nos apasiona llevar la palabra de Dios a cada hogar de Kennedy. Con más de una década de trayectoria, nos hemos consolidado como un referente de confianza, calidad y calidez en la atención. Somos especialistas en Biblias, libros de crecimiento personal, detalles cristianos y regalos con propósito.</p>
-    </section>
-
-    <section class="servicios">
-        <div class="card"><h3>📖 Amplio Catálogo</h3><p>Contamos con las mejores editoriales bíblicas y los títulos más buscados para tu edificación espiritual.</p></div>
-        <div class="card"><h3>🎁 Regalos con Propósito</h3><p>¿Buscas un detalle especial? Tenemos artículos de decoración, bolsos, prendas y accesorios que bendicen.</p></div>
-        <div class="card"><h3>👩‍🏫 Asesoría Personalizada</h3><p>Nuestra atención no es solo comercial; te guiamos, escuchamos y orientamos en la búsqueda del recurso ideal.</p></div>
-    </section>
-
-    <section>
         <h2>Nuestro Catálogo</h2>
-        <div class="productos-grid">
-            <div class="producto"><img src="61.jpg" alt="Biblia"><h3>Biblia Especial</h3><a href="https://wa.me/573125756581">Consultar</a></div>
-            <div class="producto"><img src="62.jpg" alt="Biblia"><h3>Devocional</h3><a href="https://wa.me/573125756581">Consultar</a></div>
-            <div class="producto"><img src="63.jpg" alt="Biblia"><h3>Libros</h3><a href="https://wa.me/573125756581">Consultar</a></div>
+        <div class="imagenes-grid">
+            <script>
+                for (let i = 1; i <= 12; i++) {
+                    document.write(`
+                        <div class="contenedor-img">
+                            <img src="${i}.png" alt="Producto ${i}">
+                            <a href="https://wa.me/573125756581?text=Hola, me interesa el producto ${i}" class="btn-wa-overlay track-whatsapp">Consultar</a>
+                        </div>
+                    `);
+                }
+            </script>
         </div>
     </section>
 
@@ -71,6 +99,25 @@
     <p>Calle 35C Sur No 78A-18, Kennedy Central, Bogotá</p>
     <p>Celular: 312-5756581</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.track-whatsapp').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Captura el nombre del producto desde el alt de la imagen anterior al botón
+                const productName = this.previousElementSibling.getAttribute('alt');
+                
+                // Evento para Meta Pixel
+                fbq('trackCustom', 'WhatsAppClick', {
+                    content_name: productName,
+                    source: 'LandingPage_12_Secciones'
+                });
+                
+                console.log('Evento WhatsAppClick enviado para: ' + productName);
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
