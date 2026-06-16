@@ -19,49 +19,75 @@
             height: 100%;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
-            background-color: #000; /* Fondo negro elegante */
+            background-color: #000;
             font-family: sans-serif;
         }
 
         .seccion-full {
-            height: 100vh; /* Altura de respaldo */
-            height: calc(var(--vh, 1vh) * 100); /* Altura exacta para móviles */
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             width: 100%;
             scroll-snap-align: start;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            position: relative; /* Necesario para posicionar la flecha */
             overflow: hidden;
         }
 
         .imagen-perfecta {
             width: 100%;
             height: 100%;
-            background-size: contain; /* Muestra la imagen completa */
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+        }
+
+        /* Indicador de Scroll */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #25D366; /* Verde WhatsApp */
+            font-size: 24px;
+            animation: bounce 2s infinite;
+            z-index: 5;
+            pointer-events: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
         }
     </style>
 </head>
 <body>
 
-    <!-- Generación de las 12 secciones -->
     <script>
+        // Mensaje personalizado para WhatsApp
+        const mensajeWa = encodeURIComponent("Hola, estoy interesado en un producto cristiano");
+
         for (let i = 1; i <= 12; i++) {
-            // El ?v=Date.now() es para evitar que se guarde la imagen vieja en caché
+            // Genera la flecha solo hasta la imagen 11
+            const flecha = i < 12 ? '<div class="scroll-indicator">▼</div>' : '';
+            
             document.write(`
-                <a href="https://wa.me/573125756581?text=Hola, me interesa el producto ${i}" 
+                <a href="https://wa.me/573125756581?text=${mensajeWa}" 
                    class="seccion-full track-whatsapp" 
                    data-producto="Producto ${i}">
                     <div class="imagen-perfecta" style="background-image: url('${i}.png?v=${Date.now()}');"></div>
+                    ${flecha}
                 </a>
             `);
         }
     </script>
 
-    <!-- Script para corregir el salto de pantalla en móviles -->
     <script>
+        // Corrección de altura para móviles
         function ajustarPantalla() {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
