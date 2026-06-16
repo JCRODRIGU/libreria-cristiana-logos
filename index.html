@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Librería Cristiana Logos</title>
     
+    <!-- Pixel Meta -->
     <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1377317584454825');
@@ -18,48 +19,64 @@
             height: 100%;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
-            background-color: #000; /* Fondo negro por si la imagen no llena perfecto */
+            background-color: #000; /* Fondo negro elegante */
+            font-family: sans-serif;
         }
 
         .seccion-full {
-            height: 100vh;
+            height: 100vh; /* Altura de respaldo */
+            height: calc(var(--vh, 1vh) * 100); /* Altura exacta para móviles */
             width: 100%;
             scroll-snap-align: start;
-            display: block; /* Para que el enlace ocupe todo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
+            overflow: hidden;
         }
 
-        /* Aquí es donde eliminamos los espacios negros */
-        .imagen-fondo {
+        .imagen-perfecta {
             width: 100%;
             height: 100%;
+            background-size: contain; /* Muestra la imagen completa */
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover; /* Esto estira la imagen para llenar toda la pantalla */
         }
     </style>
 </head>
 <body>
 
+    <!-- Generación de las 12 secciones -->
     <script>
         for (let i = 1; i <= 12; i++) {
+            // El ?v=Date.now() es para evitar que se guarde la imagen vieja en caché
             document.write(`
                 <a href="https://wa.me/573125756581?text=Hola, me interesa el producto ${i}" 
                    class="seccion-full track-whatsapp" 
                    data-producto="Producto ${i}">
-                    <div class="imagen-fondo" style="background-image: url('${i}.png');"></div>
+                    <div class="imagen-perfecta" style="background-image: url('${i}.png?v=${Date.now()}');"></div>
                 </a>
             `);
         }
     </script>
 
+    <!-- Script para corregir el salto de pantalla en móviles -->
     <script>
+        function ajustarPantalla() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        window.addEventListener('resize', ajustarPantalla);
+        ajustarPantalla();
+
+        // Script de Seguimiento
         document.querySelectorAll('.track-whatsapp').forEach(enlace => {
             enlace.addEventListener('click', function() {
                 const nombreProducto = this.getAttribute('data-producto');
                 fbq('trackCustom', 'WhatsAppClick', {
                     content_name: nombreProducto
                 });
+                console.log('Evento enviado: ' + nombreProducto);
             });
         });
     </script>
